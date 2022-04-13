@@ -58,12 +58,14 @@ class EmployeePayrollData {
     }
 
     set startDate(startDate) {
-        let difference = Date.now() - startDate;
-        difference = Math.ceil(difference / (1000 * 60 * 60 * 24));
-        if (difference > 30 || difference < 0) {
-          throw "Start Date is Invalid";
-        } else {
-          this._startDate = startDate;
+        var today = new Date();
+        const one_month_ago = new Date(today.setDate(today.getDate()-900));
+        today = new Date();
+        if(today < startDate || startDate < one_month_ago) {
+            throw 'Start date is invalid';
+        }
+        else {
+            this._startDate = startDate;
         }
     }
 
