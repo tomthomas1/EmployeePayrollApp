@@ -1,11 +1,11 @@
-/* UC 1 */
 * {
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+    margin-left: 0;
     height: 100%;
+    background-color: #f7f7f7;
 }
 
 .header {
@@ -39,6 +39,7 @@ body {
     letter-spacing: 0px;
     color: #82a70c;
     text-transform: capitalize;
+    padding-left: 10px;
 }
 
 .emp-payroll {
@@ -46,6 +47,7 @@ body {
 }
 
 /* UC 2 */
+
 .form-content {
     min-height: calc(100% - 80px);
     background-color: #f7f7f7;
@@ -53,6 +55,7 @@ body {
     justify-content: center;
     align-items: center;
     border: 0px solid green;
+    margin-top: 20px;
 }
 
 .form {
@@ -72,6 +75,7 @@ body {
     text-transform: capitalize;
     opacity: 1;
     padding-bottom: 20px;
+    margin-left: 50px;
 }
 
 .row-content {
@@ -80,6 +84,9 @@ body {
     margin-bottom: 10px;
     align-items: center;
     border: 0px solid green;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .label {
@@ -87,7 +94,7 @@ body {
 }
 
 label {
-    padding: 12px 12px 12px;
+    padding: 12px 12px 12px 0;
     display: inline-block;
 }
 
@@ -104,9 +111,11 @@ label {
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
+    
 }
 
 /* UC 3 */
+
 .profile-radio-content {
     display: flex;
     flex-direction: row;
@@ -125,6 +134,7 @@ label {
 }
 
 /* UC 5 */
+
 select {
     padding: 12px;
     border: 1px solid #ccc;
@@ -134,9 +144,11 @@ select {
     letter-spacing: 0px;
     color: #42515f;
     background-color: transparent;
+    margin-right: 20px;
 }
 
 /* UC 6 */
+
 .buttonParent {
     display: flex;
     margin-bottom: 10px;
@@ -158,6 +170,9 @@ select {
     padding: 7px 7px;
     border: 1px solid #707070;
     cursor: pointer;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top : 10px;
 }
 
 .submitButton {
@@ -169,10 +184,27 @@ select {
     text-decoration: none;
     text-align: center;
     padding: 20px 40px;
+    
 }
 
-.resetButton{
+.resetButton {
     padding: 20px 40px;
+}
+
+.button.submitButton:disabled{
+    opacity: 0.3;
+}
+
+error-output{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+    white-space: nowrap;
+}
+
+.button:hover {
+    box-shadow: 0px 8px 15px rgba(77, 74, 74, 0.3);
 }
 
 @media only screen and (max-width: 960px) {
@@ -209,7 +241,7 @@ select {
     .submitButton {
         margin: 0;
     }
-    .button-content {
+    .buttonParent {
         flex-direction: column-reverse;
         align-items: flex-start;
     }
